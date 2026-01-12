@@ -1,0 +1,115 @@
+$displays: flex ,none,grid,block,inline,inline-block;
+$justifies: center,end,start,space-between,space-around,space-evenly,stretch;
+$directions: row,row-reverse,column,column-reverse;
+$alings: center , end ,start ;
+$borders: none ,solid,dashed;
+$colors:(
+    surx: red,
+    kabut: blue,
+    zard: yellow,
+    sabz: #24AB70,
+    siyox: black,
+    grey: grey,
+    lgrey: lightgrey,
+    safed: white,
+    surxbr: #F5333F,
+    bgcc: #24AB700A,
+);
+@each $border in $borders {
+    .border-#{$border}{
+        border: $border;
+    }
+}
+
+@each $key,$value in $colors{
+    .color-#{$key}{
+        color: $value;
+    }
+     .bgc-#{$key}{
+        background-color: $value;
+    }
+     .borderc-#{$key}{
+         border-color: $value;
+    }
+}
+@each $aling in $alings{
+    .al-#{$aling}{
+        align-items: $aling;
+    }
+}
+@each $display in $displays{
+    .#{$display}{
+        display: $display;
+    }
+}
+    @each $justify in $justifies{
+        .#{$justify}{
+            justify-content: $justify;
+        }
+    }
+    @each $direction in $directions{
+        .#{$direction}{
+        flex-direction: $direction;
+    }
+}
+@for $a from 1 through 100{
+    .w-#{$a}{
+        width: $a*10px;
+    }
+     .wf-#{$a}{
+        width: $a*1%;
+    }
+    .h-#{$a}{
+        height: $a*10px;
+    }
+    .p-#{$a}{
+        padding: $a*10px;
+    }
+    .m-#{$a}{
+        margin: $a*10px;
+    }
+    .fs-#{$a}{
+        font-size: $a*10px;
+    }
+     .bordr-#{$a}{
+        border-radius: $a*10px;
+    }
+         .mtb-#{$a}{
+        margin: $a*10px 0px;
+    }
+         .ptb-#{$a}{
+        padding: $a*10px 0px;
+    }
+    .g-#{$a}{
+        gap: $a*10px;
+    }
+    .ma-#{$a}{
+        margin: $a*10px auto;
+    }
+    .ml-#{$a}{
+        margin-left: $a*10px ;
+    }
+     .pb-#{$a}{
+        padding-bottom : $a*10px ;
+    }
+     .mt-#{$a}{
+        margin-top: $a*10px ;
+    }
+}
+.box{
+    position: absolute;
+    top: 750px;
+    left: 300px;
+}
+input{
+    border: none;
+    outline: none;
+}
+.box1{
+    position: relative;
+    top: -400px;
+}
+.box3{
+    position: relative;
+    top: -40px;
+}
